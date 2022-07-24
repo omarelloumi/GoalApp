@@ -1,7 +1,10 @@
+const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv').config();
-const mongoose = require('mongoose');
-const errorHandler = require('./middleware/errorMiddleware');
+const { errorHandler } = require('./middleware/errorMiddleware');
+const  connectDB  = require('./config/db');
+
+connectDB();
 
 const port = process.env.PORT;
 

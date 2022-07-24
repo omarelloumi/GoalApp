@@ -1,28 +1,30 @@
-const getGoals = async (req, res) => {
+const asyncHandler = require('express-async-handler')
+
+const getGoals = asyncHandler(async (req, res) => {
     res.status(200).json({
         message: 'Goals'
     });
-}
+})
 
-const setGoal = async (req, res) => {
+const setGoal = asyncHandler(async (req, res) => {
     res.status(200).json({
         message: 'create Goal'
     });
-}
+})
 
 
-const updateGoal = async (req, res) => {
+const updateGoal = asyncHandler(async (req, res) => {
     res.status(200).json({
         message: 'update Goal' + req.params.id
     });
-}
+})
 
 
-const deleteGoal = async (req, res) => {
+const deleteGoal = asyncHandler(async (req, res) => {
     res.status(200).json({
         message: 'delete Goal' + req.params.id
     });
-}
+})
 
 
 module.exports = {
