@@ -17,6 +17,10 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
         </Routes>
+        <footer className=''>
+          <p>&copy; 2020</p>
+
+        </footer>
       </div>
     </Router>
     <ToastContainer />
